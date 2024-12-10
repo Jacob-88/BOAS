@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'; // Добавьте эту строку
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,5 +12,7 @@ root.render(
   </React.StrictMode>
 );
 
-// Измерение производительности (не обязательно)
+// Регистрируем Service Worker
+serviceWorkerRegistration.register();
+
 reportWebVitals();
